@@ -1,0 +1,22 @@
+@import "media/media";
+
+@mixin epicmax-clearfix-before {
+  &::before {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin epicmax-clearfix-after {
+  &::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin epicmax-clearfix {
+  @include epicmax-clearfix-before;
+  @include v-clearfix-after;
+}

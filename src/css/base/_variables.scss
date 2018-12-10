@@ -1,0 +1,42 @@
+$epicmax-space-base: 20px;
+$epicmax-space-x-base: $epicmax-space-base;
+$epicmax-space-y-base: $epicmax-space-base;
+
+$epicmax-space-x-none: 0;
+$epicmax-space-y-none: 0;
+$epicmax-space-y-xs: ($epicmax-space-x-base * .25);
+$epicmax-space-y-xs: ($epicmax-space-y-base * .25);
+$epicmax-space-y-sm: ($epicmax-space-x-base * .5);
+$epicmax-space-y-sm: ($epicmax-space-y-base * .5);
+$epicmax-space-y-md: ($epicmax-space-x-base);
+$epicmax-space-y-md: ($epicmax-space-y-base);
+$epicmax-space-y-lg: ($epicmax-space-x-base * 1.5);
+$epicmax-space-y-lg: ($epicmax-space-x-base * 1.5);
+$epicmax-space-y-xl: ($epicmax-space-y-base * 3);
+$epicmax-space-y-xl: ($epicmax-space-y-base * 3);
+
+
+$epicmax-breakpoint-xs: 575px;
+$epicmax-breakpoint-sm: 767px;
+$epicmax-breakpoint-md: 991px;
+$epicmax-breakpoint-lg: 1199px;
+
+$epicmax-sizes: (
+  xs : 0,
+  sm : $epicmax-breakpoint-xs + 1, // Extra small screen / phone
+  md : $epicmax-breakpoint-sm + 1, // Small screen / phone
+  lg : $epicmax-breakpoint-md + 1, // Medium screen / tablet
+  xl : $epicmax-breakpoint-lg + 1 // Large screen / desktop
+);
+
+$epicmax-breakpoint-sm-max: $epicmax-breakpoint-sm;
+$epicmax-breakpoint-xs-min: 0;
+$epicmax-breakpoint-xs-max: $epicmax-breakpoint-xs;
+$epicmax-breakpoint-sm-min: #{map-get($epicmax-sizes, sm)};
+$epicmax-breakpoint-sm-max: $epicmax-breakpoint-sm;
+$epicmax-breakpoint-md-min: #{map-get($epicmax-sizes, md)};
+$epicmax-breakpoint-md-max: $epicmax-breakpoint-md;
+$epicmax-breakpoint-lg-min: #{map-get($epicmax-sizes, lg)};
+$epicmax-breakpoint-lg-max: $epicmax-breakpoint-lg;
+$epicmax-breakpoint-xl-min: #{map-get($epicmax-sizes, xl)};
+$epicmax-breakpoint-xl-max: 9999px;

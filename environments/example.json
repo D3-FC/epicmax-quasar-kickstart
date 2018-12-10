@@ -1,0 +1,9 @@
+{
+  "API_URL": "http://coplays-content.on.local/api",
+  "APPLICATION_ID": "1",
+  "CLIENT_ID": "2",
+  "CLIENT_SECRET": "",
+  "BUGSNAG_API_KEY": "",
+  "VUE_ROUTER_MODE": "history",
+  "BUILD_ENV": "dev"
+}

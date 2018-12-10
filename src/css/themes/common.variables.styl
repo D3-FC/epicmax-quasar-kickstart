@@ -1,0 +1,70 @@
+// App Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Stylus variables found in Quasar's source Stylus files. Setting
+// variables before Quasar's Stylus will use these variables rather than
+// Quasar's default Stylus variable values. Stylus variables specific
+// to the themes belong in either the variables.ios.styl or variables.mat.styl files.
+
+// Check documentation for full list of Quasar variables
+
+// App Shared Color Variables
+// --------------------------------------------------
+// It's highly recommended to change the default colors
+// to match your app's branding.
+
+
+
+$primary = #5f8fdf
+$secondary = #26A69A
+$tertiary = #555
+
+$neutral = #E0E1E2
+$positive = #13ce66
+$negative = #ec205f
+$info = #31CCEC
+$warning = #F2C037
+//$space-base = 20px
+$body-color = #4a596a
+$input-font-size = 16px
+$button-font-weight = 400
+$form-dark    = #d3dce6
+$tabs-text-transform = none
+$tabs-font-weight  = 400
+$layout-header-shadow = none
+
+$light     = $form-dark
+
+$space-base   ?= 16px
+$space-x-base ?= $space-base
+$space-y-base ?= $space-base
+$spaces ?= {
+  none: {
+    x: 0,
+    y: 0
+  },
+  xs: {
+    x: ($space-x-base * .25),
+    y: ($space-y-base * .25)
+  },
+  sm: {
+    x: ($space-x-base * .5),
+    y: ($space-y-base * .5)
+  },
+  md: {
+    x: $space-x-base,
+    y: $space-y-base
+  },
+  lg: {
+    x: ($space-x-base * 1.5),
+    y: ($space-y-base * 1.5)
+  },
+  xl: {
+    x: ($space-x-base * 3),
+    y: ($space-y-base * 3)
+  }
+}
+
+$button-shadow                = 0 0 0 1px rgba(43,45,80, 0.1), 0 2px 5px 0 rgba(43,45,80, 0.1), 0 3px 9px 0 rgba(43,45,80, 0.08), 0 1px 1.5px 0 rgba(0,0,0, 0.08), 0 1px 2px 0 rgba(0,0,0, 0.08);
+$button-shadow-active         = $button-shadow
+$button-padding               = $spaces.sm.y $spaces.md.x

@@ -1,0 +1,20 @@
+@mixin epicmax-sm {
+  @media (max-width: $epicmax-breakpoint-sm-max) {
+    @content;
+  }
+}
+@mixin epicmax-md {
+  @media (min-width: $epicmax-breakpoint-md-min) and (max-width: $epicmax-breakpoint-md-max) {
+    @content;
+  }
+}
+@mixin epicmax-lg {
+  @media (min-width: $epicmax-breakpoint-lg-min) and (max-width: $epicmax-breakpoint-lg-max) {
+    @content;
+  }
+}
+@mixin epicmax-xl {
+  @media (min-width: $epicmax-breakpoint-xl-min) {
+    @content;
+  }
+}

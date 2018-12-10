@@ -1,0 +1,91 @@
+{
+  "name": "epicmax-app",
+  "version": "1.0.0",
+  "description": "A epicmax kickstarter app",
+  "productName": "Epicmax kickstarter App",
+  "cordovaId": "app.epicmax.com",
+  "author": "Epicmax <hello@epicmax.com>",
+  "private": true,
+  "scripts": {
+    "browser:serve": "cross-env BUILD_ENV=dev PACKAGE=global quasar dev --history",
+    "browser:serve:staging": "cross-env BUILD_ENV=staging PACKAGE=global quasar dev",
+    "browser:serve:prod": "cross-env BUILD_ENV=production PACKAGE=global quasar dev",
+    "browser:build": "cross-env BUILD_ENV=dev PACKAGE=global quasar build",
+    "android:devices": "adb devices",
+    "android:serve": "cross-env BUILD_ENV=dev PACKAGE=global quasar dev -m cordova -T android",
+    "android:dev": "cross-env BUILD_ENV=dev PACKAGE=global quasar build -m cordova -T android && cd src-cordova && cordova run android",
+    "android:staging:serve": "cross-env BUILD_ENV=staging PACKAGE=global quasar dev -m cordova -T android",
+    "android:staging:build": "cross-env BUILD_ENV=staging PACKAGE=global quasar build -m cordova -T android && cd src-cordova && cordova run android",
+    "android:prod": "cross-env BUILD_ENV=production PACKAGE=global quasar build -m cordova -T android && cd src-cordova && cordova run android",
+    "android:production": "cross-env BUILD_ENV=production PACKAGE=global quasar build -m cordova -T android && cd src-cordova && cordova run android",
+    "lint": "eslint --fix --ext .js,.vue src",
+    "test": "jest"
+  },
+  "dependencies": {
+    "asva-executors": "^0.1.19",
+    "axios": "^0.18.0",
+    "vue": "^2.5.17",
+    "vue-i18n": "^8.3.2",
+    "vue-property-decorator": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.9",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/eslint-config-typescript": "^3.1.1",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^23.6.0",
+    "babel-preset-vue-app": "^2.0.0",
+    "constant-case": "^2.0.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-config-typescript": "^1.1.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-typescript": "^0.13.0",
+    "eslint-plugin-vue": "^4.3.0",
+    "jest": "^23.6.0",
+    "jest-serializer-vue": "^2.0.2",
+    "jest-transform-stub": "^1.0.0",
+    "lint-staged": "^8.0.5",
+    "node-sass": "^4.10.0",
+    "quasar-cli": "0.17.20",
+    "sass-loader": "^7.1.0",
+    "strip-ansi": "=3.0.1",
+    "ts-loader": "^5.3.0",
+    "typescript": "^3.1.6",
+    "typescript-eslint-parser": "^21.0.1",
+    "vue-book": "0.0.14",
+    "vue-jest": "^3.0.0",
+    "yorkie": "^2.0.0"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix --ext .js src",
+      "git add"
+    ],
+    "*.vue": [
+      "eslint --fix --ext .vue src",
+      "git add"
+    ]
+  }
+}
